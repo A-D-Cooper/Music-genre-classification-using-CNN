@@ -12,7 +12,7 @@ def conv_files(folder):
             save_file(spectrogram, name, genre)
 
 def spec(file_path):
-    sample_rate, samples = wavfile.read('path-to-mono-audio-file.wav')
+    sample_rate, samples = wavfile.read(file_path)
     frequencies, times, spectrogram = signal.spectrogram(samples, sample_rate)
     return spectrogram
 
